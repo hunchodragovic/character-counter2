@@ -8,11 +8,11 @@ import { useMainContext } from "./contexts/MainContext";
 
 const App = () => {
   const { theme } = useTheme();
-  const { text, totalCharacters, wordCounter, sentenceCounter } =
+  const { text, characterCounter, wordCounter, sentenceCounter } =
     useMainContext();
 
   // Calculate stats
-  const charCount = totalCharacters(text);
+  const charCount = characterCounter(text);
   const wordCount = wordCounter(text);
   const sentenceCount = sentenceCounter(text);
 
